@@ -2,11 +2,6 @@
 #include "sudoku.h"
 #include <stddef.h>
 
-// Helper function to find hidden single values in a group (row, column, or box)
-bool is_candidate(Cell *cell, int value)
-{
-    return cell->candidates[value - 1] == 1;
-}
 
 int find_hidden_single_values(Cell **p_cells, int *hidden_single_values) {
     int counter = 0;

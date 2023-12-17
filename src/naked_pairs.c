@@ -2,12 +2,7 @@
 #include "sudoku.h"
 #include <stddef.h>
 
-bool is_candidate(Cell *cell, int value)
-{
-    return cell->candidates[value - 1] == 1;
-}
-bool apply_constraint(Cell **p_cells, int value)
-{
+
     bool ret = false;
 
     for (int i = 0; i < BOARD_SIZE; i++)
